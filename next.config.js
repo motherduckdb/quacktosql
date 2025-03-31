@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/quacktosql',
   webpack: (config) => {
     // Add WASM support
     config.experiments = {

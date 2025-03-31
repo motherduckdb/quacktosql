@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'Aeonik Mono';
-  src: url('/fonts/AeonikMono/AeonikMono-Regular.woff2') format('woff2'),
-    url('/fonts/AeonikMono/AeonikMono-Regular.woff') format('woff');
+  src: url('/quacktosql/fonts/AeonikMono/AeonikMono-Regular.woff2') format('woff2'),
+    url('/quacktosql/fonts/AeonikMono/AeonikMono-Regular.woff') format('woff');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: 'Aeonik Fono';
-  src: url('/fonts/AeonikMono/AeonikFonoTRIAL-Regular.otf') format('opentype');
+  src: url('/quacktosql/fonts/AeonikMono/AeonikFonoTRIAL-Regular.otf') format('opentype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;

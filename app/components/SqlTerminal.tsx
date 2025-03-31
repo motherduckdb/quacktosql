@@ -38,7 +38,7 @@ export const SqlTerminal: React.FC<SqlTerminalProps> = ({ typedQuery, quackCount
     <div className="w-full bg-white rounded-md border-2 border-[#383838] shadow-md mb-4">
       <div className="p-6">
         <div className="flex items-center mb-2">
-          <img src="/database.svg" alt="Database" className="h-9 w-9 mr-3" style={{ maxHeight: '48px' }} />
+          <img src="/quacktosql/database.svg" alt="Database" className="h-9 w-9 mr-3" style={{ maxHeight: '48px' }} />
           <h2 className="title-quack text-2xl font-bold">SQL OUTPUT</h2>
         </div>
         <p className="text-gray-600 mb-4">Your quacks translated into SQL query</p>
@@ -99,7 +99,7 @@ export const SqlTerminal: React.FC<SqlTerminalProps> = ({ typedQuery, quackCount
               window.open(`https://app.motherduck.com/`, '_blank');
             }}
           >
-            <img src="/motherduck.svg" alt="MotherDuck" className="h-5 w-5 mr-2" />
+            <img src="/quacktosql/motherduck.svg" alt="MotherDuck" className="h-5 w-5 mr-2" />
             Run in MotherDuck
           </button>
         </div>

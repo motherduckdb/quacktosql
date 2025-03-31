@@ -146,7 +146,7 @@ export const QuackPipe: React.FC<QuackPipeProps> = ({ quackCount, transcription 
         
         {/* Duck icon at input - adjusted size */}
         <image 
-          href="/duck_running.svg"
+          href="/quacktosql/duck_running.svg"
           x="3" 
           y="12" 
           height="35" 
@@ -165,7 +165,7 @@ export const QuackPipe: React.FC<QuackPipeProps> = ({ quackCount, transcription 
         
         {/* Database icon at output */}
         <image 
-          href="/database.svg"
+          href="/quacktosql/database.svg"
           x="962" 
           y="12" 
           height="35" 
@@ -176,7 +176,7 @@ export const QuackPipe: React.FC<QuackPipeProps> = ({ quackCount, transcription 
         {ducks.map(duck => (
           <image
             key={duck.id}
-            href="/duck_running.svg"
+            href="/quacktosql/duck_running.svg"
             x={duck.x - duck.size/2}
             y={duck.y - duck.size/2}
             width={duck.size * 1.7}

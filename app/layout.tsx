@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: "The world's first duck-based SQL query generator. Convert quacks into powerful SQL queries in your browser.",
     images: [
       {
-        url: "/website_card.png",
+        url: "/quacktosql/website_card.png",
         width: 1200,
         height: 630,
         alt: "Quack To SQL"
@@ -44,19 +44,19 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Quack To SQL - Duck Sounds to SQL Queries",
     description: "The world's first duck-based SQL query generator. Convert quacks into powerful SQL queries in your browser.",
-    images: ["/website_card.png"],
+    images: ["/quacktosql/website_card.png"],
     creator: "@Quack To SQL"
   },
   icons: {
     icon: [
-      { url: '/favicon/favicon.ico' },
-      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' }
+      { url: '/quacktosql/favicon/favicon.ico' },
+      { url: '/quacktosql/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' }
     ],
-    apple: { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    apple: { url: '/quacktosql/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     other: [
-      { rel: 'manifest', url: '/favicon/site.webmanifest' },
-      { url: '/favicon/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' }
+      { rel: 'manifest', url: '/quacktosql/favicon/site.webmanifest' },
+      { url: '/quacktosql/favicon/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/quacktosql/favicon/web-app-manifest-512x512.png', sizes: '512x512', type: 'image/png' }
     ]
   }
 };

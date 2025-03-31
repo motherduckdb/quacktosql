@@ -205,7 +205,7 @@ export default function Home() {
       <div className="w-full max-w-6xl">
         <div className="text-center mb-6">
           <div className="flex flex-col items-center justify-center">
-            <img src="/duck-quack.svg" alt="Duck" className="h-60 w-60 -mb-12" />
+            <img src="/quacktosql/duck-quack.svg" alt="Duck" className="h-60 w-60 -mb-12" />
             <h1 className="title-quack text-4xl font-bold">Quack To SQL MODEL</h1>
           </div>
           <h2 className="title-sub text-xl text-[#383838] mt-3">A model that generates SQL from quack sound</h2>
@@ -236,7 +236,7 @@ export default function Home() {
           <div className="flex-1 bg-white rounded-md border-2 border-[#383838] shadow-md p-6 relative">
             <div className="flex items-center mb-4">
               <div className="flex items-center">
-                <img src="/DuckInput.svg" alt="Duck Input" className="h-9 w-9 mr-2" style={{ maxHeight: '48px' }} />
+                <img src="/quacktosql/DuckInput.svg" alt="Duck Input" className="h-9 w-9 mr-2" style={{ maxHeight: '48px' }} />
                 <h2 className="title-quack text-2xl font-bold">DUCK INPUT</h2>
               </div>
             </div>
