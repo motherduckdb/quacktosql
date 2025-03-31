@@ -206,7 +206,7 @@ export default function Home() {
         <div className="text-center mb-6">
           <div className="flex flex-col items-center justify-center">
             <img src="/duck-quack.svg" alt="Duck" className="h-60 w-60 -mb-16" />
-            <h1 className="title-quack text-4xl font-bold">QUACK2SQL MODEL</h1>
+            <h1 className="title-quack text-4xl font-bold">Quack To SQL MODEL</h1>
           </div>
           <h2 className="title-sub text-xl text-[#383838] mt-3">A model that generates SQL from quack sound</h2>
           {tps && (

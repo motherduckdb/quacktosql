@@ -1,6 +1,6 @@
-# Quack2SQL
+# Quack-to-SQL
 
-The world's first duck-based SQL query generator! Quack2SQL is a web application that converts duck sounds ("quacks") into powerful SQL queries directly in your browser, with all processing happening locally.
+The world's first duck-based SQL query generator! Quack To SQL is a web application that converts duck sounds ("quacks") into powerful SQL queries directly in your browser, with all processing happening locally.
 
 ## Features
 
@@ -22,8 +22,8 @@ The world's first duck-based SQL query generator! Quack2SQL is a web application
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/quack2sql.git
-   cd quack2sql
+   git clone https://github.com/yourusername/Quack To SQL.git
+   cd Quack To SQL
    ```
 
 2. Install dependencies:

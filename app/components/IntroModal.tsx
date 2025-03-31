@@ -17,12 +17,12 @@ export const IntroModal: React.FC<IntroModalProps> = ({ isOpen, onDownload }) =>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          <h2 className="title-main text-xl font-semibold text-gray-900">Advanced Quack2SQL Model</h2>
+          <h2 className="title-main text-xl font-semibold text-gray-900">Advanced Quack To SQL Model</h2>
         </div>
         
         <div className="mb-6">
           <p className="text-gray-700 mb-4">
-            This advanced Quack2SQL model translates duck sounds into SQL queries in real-time, directly in your browser.
+            This advanced Quack To SQL model translates duck sounds into SQL queries in real-time, directly in your browser.
           </p>
           
           <div className="bg-blue-50 p-4 rounded-md mb-4">

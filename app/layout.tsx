@@ -24,17 +24,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Quack2SQL - Translate Duck Sounds to SQL Queries",
+  title: "Quack To SQL - Translate Duck Sounds to SQL Queries",
   description: "The world's first duck-based SQL query generator. Convert your quacks into powerful SQL queries directly in your browser with no data leaving your device.",
   openGraph: {
-    title: "Quack2SQL - Duck Sounds to SQL Queries",
+    title: "Quack To SQL - Duck Sounds to SQL Queries",
     description: "The world's first duck-based SQL query generator. Convert quacks into powerful SQL queries in your browser.",
     images: [
       {
         url: "/website_card.png",
         width: 1200,
         height: 630,
-        alt: "Quack2SQL"
+        alt: "Quack To SQL"
       }
     ],
     locale: "en_US",
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quack2SQL - Duck Sounds to SQL Queries",
+    title: "Quack To SQL - Duck Sounds to SQL Queries",
     description: "The world's first duck-based SQL query generator. Convert quacks into powerful SQL queries in your browser.",
     images: ["/website_card.png"],
-    creator: "@quack2sql"
+    creator: "@Quack To SQL"
   },
   icons: {
     icon: [
