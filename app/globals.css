@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Aeonik Mono';
+  src: url('/fonts/AeonikMono/AeonikMono-Regular.woff2') format('woff2'),
+    url('/fonts/AeonikMono/AeonikMono-Regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik Fono';
+  src: url('/fonts/AeonikMono/AeonikFonoTRIAL-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --background: #F4EFE9;
+  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 244, 239, 233;
+  --background-end-rgb: 244, 239, 233;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: 'Aeonik Mono', var(--font-geist-mono);
+  --font-fono: 'Aeonik Fono', monospace;
+  --font-title: var(--font-cousine);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  color: rgb(var(--foreground-rgb));
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom animations */
+@keyframes rise {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.8s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+.animate-typing {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1s steps(30, end);
+}
+
+/* Typing indicator animations */
+@keyframes ellipsis1 {
+  0%, 100% { opacity: 0; }
+  25%, 50% { opacity: 1; }
+}
+
+@keyframes ellipsis2 {
+  0%, 100% { opacity: 0; }
+  50%, 75% { opacity: 1; }
+}
+
+@keyframes ellipsis3 {
+  0%, 50% { opacity: 0; }
+  75%, 100% { opacity: 1; }
+}
+
+.animate-ellipsis-1 {
+  animation: ellipsis1 1.5s infinite;
+}
+
+.animate-ellipsis-2 {
+  animation: ellipsis2 1.5s infinite;
+}
+
+.animate-ellipsis-3 {
+  animation: ellipsis3 1.5s infinite;
+}
+
+/* Custom utility classes */
+.overflow-wrap-anywhere {
+  overflow-wrap: anywhere;
+}
+
+/* Terminal styles */
+.terminal-text {
+  font-family: var(--font-mono), 'Courier New', monospace;
+  color: #33ff33;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #33ff33;
+  animation: blink 1s infinite;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+/* Title styles */
+.title-main {
+  font-family: var(--font-title);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.title-sub {
+  font-family: var(--font-title);
+  font-weight: 400;
+}
+
+.title-quack {
+  font-family: 'Aeonik Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #383838;
+}
+
+.label-bold {
+  font-family: var(--font-title);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
