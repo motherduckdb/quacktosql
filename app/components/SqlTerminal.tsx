@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import posthog from 'posthog-js';
 
 interface SqlTerminalProps {
   typedQuery: string;
@@ -95,8 +96,13 @@ export const SqlTerminal: React.FC<SqlTerminalProps> = ({ typedQuery, quackCount
           <button 
             className="px-4 py-2 rounded border-2 border-[#383838] bg-[#FF7169] text-[#383838] font-medium shadow-md uppercase flex items-center transition-all duration-200 hover:translate-y-[-2px] hover:translate-x-[-2px] hover:shadow-[-4px_4px_0_0_#383838]"
             onClick={() => {
-              // Implement MotherDuck integration here
-              window.open(`https://app.motherduck.com/`, '_blank');
+              // Capture custom event when clicking "Run in MotherDuck"
+              posthog.capture('run_in_motherduck_clicked', { 
+                query: displayQuery,
+                quackCount: quackCount
+              });
+              // Open MotherDuck
+              window.open(`https://bit.ly/3G25Qyr`, '_blank');
             }}
           >
             <img src="/quacktosql/motherduck.svg" alt="MotherDuck" className="h-5 w-5 mr-2" />

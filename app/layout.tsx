@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Geist, Geist_Mono, Cousine } from "next/font/google";
 import "./globals.css";
+import { PostHogProvider } from "./providers";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,6 +25,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://motherduck.com'),
   title: "Quack To SQL - Translate Duck Sounds to SQL Queries",
   description: "The world's first duck-based SQL query generator. Convert your quacks into powerful SQL queries directly in your browser with no data leaving your device.",
   openGraph: {
@@ -71,7 +73,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${cousine.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <PostHogProvider>
+          {children}
+        </PostHogProvider>
       </body>
     </html>
   );
