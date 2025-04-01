@@ -45,7 +45,7 @@ export const QuackCongratulation: React.FC<QuackCongratulationProps> = ({ isVisi
       source: 'congratulations_modal'
     });
     // Open MotherDuck
-    window.open(`https://bit.ly/3G25Qyr`, '_blank');
+    window.open(`https://app.motherduck.com/?utm_campaign=aprilfools2025`, '_blank');
     onClose();
   };
   
