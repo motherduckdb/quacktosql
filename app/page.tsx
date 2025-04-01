@@ -209,8 +209,25 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-[#F4EFE9]">
-      <div className="w-full max-w-6xl">
+    <div className="min-h-screen flex flex-col items-center bg-[#F4EFE9]">
+      {/* Full-width announcement banner */}
+      <div className="w-full bg-[#FFE81A] border-2 border-[#383838]">
+        <div className="flex items-center justify-center px-6 py-2.5">
+          <a 
+            href="https://motherduck.com/blog/quacktosql"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[#383838] hover:opacity-80 transition-opacity"
+          >
+            <span className="title-quack text-sm">Read the announcement of Quack To SQL release</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div className="w-full max-w-6xl p-4">
         <div className="text-center mb-6">
           <div className="flex flex-col items-center justify-center">
             <img src="/quacktosql/duck-quack.svg" alt="Duck" className="h-60 w-60 -mb-12" />
