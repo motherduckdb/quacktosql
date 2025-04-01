@@ -15,6 +15,7 @@ import { QuackPipe } from "./components/QuackPipe";
 import { useAudioProcessing } from "./hooks/useAudioProcessing";
 import { useQuackTyping } from "./hooks/useQuackTyping";
 import { useWorker } from "./hooks/useWorker";
+import { TimeoutModal } from "./components/TimeoutModal";
 
 export default function Home() {
   // State for audio processing
@@ -27,6 +28,7 @@ export default function Home() {
   const [showModelModal, setShowModelModal] = useState(false);
   const [showCongratulation, setShowCongratulation] = useState(false);
   const [hasSeenCongrats, setHasSeenCongrats] = useState(false);
+  const [showTimeoutModal, setShowTimeoutModal] = useState(false);
 
   // Transcription update handler - logs and sets transcription
   const handleTranscriptionUpdate = useCallback((text: string) => {
@@ -91,7 +93,8 @@ export default function Home() {
     setIsProcessing,
     setStream,
     setIsRecording,
-    setErrorMessage
+    setErrorMessage,
+    setShowTimeoutModal
   });
 
   // Function to handle errors with fallback retries
@@ -186,6 +189,11 @@ export default function Home() {
     loadModel();
   };
 
+  // Handle start recording after timeout
+  const handleStartAfterTimeout = () => {
+    setShowTimeoutModal(false);
+    startRecording();
+  };
 
   // Different button layouts based on recording state
   const renderRecordingInterface = () => {
@@ -229,6 +237,12 @@ export default function Home() {
           isVisible={showCongratulation}
           onClose={handleCloseCongratulation}
           query={typedQuery}
+        />
+        
+        {/* Timeout modal */}
+        <TimeoutModal 
+          isOpen={showTimeoutModal}
+          onStartAgain={handleStartAfterTimeout}
         />
         
         {/* Main two-column layout */}

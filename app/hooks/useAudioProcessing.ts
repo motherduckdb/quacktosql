@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 
 // Constants for Whisper
 const WHISPER_SAMPLING_RATE = 16_000;
-const MAX_AUDIO_LENGTH = 20; // seconds
+const MAX_AUDIO_LENGTH = 180; // 3 minutes in seconds
 const MAX_SAMPLES = WHISPER_SAMPLING_RATE * MAX_AUDIO_LENGTH;
 
 interface UseAudioProcessingProps {
@@ -14,6 +14,7 @@ interface UseAudioProcessingProps {
   setIsRecording: (state: boolean) => void;
   setErrorMessage: (message: string) => void;
   worker: React.RefObject<Worker | null>;
+  setShowTimeoutModal: (state: boolean) => void;
 }
 
 interface AudioProcessingResult {
@@ -42,7 +43,8 @@ export const useAudioProcessing = ({
   setStream,
   setIsRecording,
   setErrorMessage,
-  worker
+  worker,
+  setShowTimeoutModal
 }: UseAudioProcessingProps): AudioProcessingResult => {
   // Audio processing state
   const [audioLevel, setAudioLevel] = useState(0);
@@ -375,6 +377,7 @@ export const useAudioProcessing = ({
         setTimeLeft((prevTime) => {
           if (prevTime <= 1) {
             stopRecording();
+            setShowTimeoutModal(true); // Show timeout modal when time is up
             return 0;
           }
           return prevTime - 1;
