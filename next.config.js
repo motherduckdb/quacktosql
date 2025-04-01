@@ -19,6 +19,7 @@ const nextConfig = {
   // Allow specific packages to be used in Client Components
   transpilePackages: ['@xenova/transformers'],
   reactStrictMode: true,
+  trailingSlash: true,
 };
 
 module.exports = nextConfig; 
