@@ -14,7 +14,7 @@ export const SqlTerminal: React.FC<SqlTerminalProps> = ({ typedQuery, quackCount
     // If user reached 10 quacks, override with special query
     if (quackCount >= 10) {
       const specialQuery = 
-        "-- 🎊 CONGRATULATIONS! Full query unlocked! 🎊\n" + 
+        "-- 🎊 CONGRATULATIONS! Run this in MotherDuck to receive 10 Duckets! 🎊\n" + 
         typedQuery;
       setDisplayQuery(specialQuery);
     } else {
@@ -56,7 +56,7 @@ export const SqlTerminal: React.FC<SqlTerminalProps> = ({ typedQuery, quackCount
           <div className="p-4 font-mono text-sm overflow-auto h-64 whitespace-pre">
             {quackCount >= 10 ? (
               <>
-                <div className="text-amber-400 font-bold mb-2">-- 🎊 CONGRATULATIONS! Full query unlocked! 🎊</div>
+                <div className="text-amber-400 font-bold mb-2">-- 🎊 CONGRATULATIONS! Run this in MotherDuck to receive 10 Duckets! 🎊</div>
                 <span className="text-green-400">{typedQuery}</span>
               </>
             ) : (

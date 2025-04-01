@@ -228,6 +228,7 @@ export default function Home() {
         <QuackCongratulation
           isVisible={showCongratulation}
           onClose={handleCloseCongratulation}
+          query={typedQuery}
         />
         
         {/* Main two-column layout */}
