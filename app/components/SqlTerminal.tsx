@@ -102,7 +102,7 @@ export const SqlTerminal: React.FC<SqlTerminalProps> = ({ typedQuery, quackCount
                 quackCount: quackCount
               });
               // Open MotherDuck
-              window.open(`https://bit.ly/3G25Qyr`, '_blank');
+              window.open(`https://app.motherduck.com/?utm_campaign=aprilfools2025`, '_blank');
             }}
           >
             <img src="/quacktosql/motherduck.svg" alt="MotherDuck" className="h-5 w-5 mr-2" />
