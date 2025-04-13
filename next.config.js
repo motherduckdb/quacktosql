@@ -14,10 +14,22 @@ const nextConfig = {
       use: { loader: 'worker-loader' },
     });
 
+    // Exclude ONNX runtime binary files
+    config.module.rules.push({
+      test: /\.node$/,
+      use: 'node-loader',
+    });
+
+    // Ignore ONNX runtime binary files
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'onnxruntime-node': false,
+    };
+
     return config;
   },
   // Allow specific packages to be used in Client Components
-  transpilePackages: ['@xenova/transformers'],
+  transpilePackages: ['@huggingface/transformers'],
   reactStrictMode: true,
   trailingSlash: true,
 };
